@@ -35,4 +35,5 @@ Para clonar y ejecutar este proyecto localmente, necesitas tener instalado Java 
 Las credenciales de la base de datos y otras configuraciones sensibles no se encuentran en el código fuente de este repositorio por motivos de seguridad; deben configurarse a nivel del servidor de aplicaciones mediante un *Data Source*.
 
 ## ✒️ Autor
-Proyecto universitario desarrollado por [Tu Nombre/Usuario].
+Proyecto universitario desarrollado por Cristopher Luna
+
