@@ -1,0 +1,499 @@
+/* ============================================
+   STYLES-ADMIN.CSS - PANEL DE ADMINISTRACIÓN MEJORADO
+   ============================================ */
+
+/* Body específico para admin - SIN interferir con components.css */
+body.body-admin {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+}
+
+/* Override seguro para el layout admin */
+.admin .main-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin .main-content-with-sidebar {
+    flex: 1;
+    padding: var(--spacing-lg);
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Sidebar específico para admin */
+.sidebar.admin-theme {
+    background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+    border-right: none;
+}
+
+.sidebar.admin-theme .sidebar-header {
+    background: #1a252f;
+    border-bottom-color: #34495e;
+    padding: var(--spacing-lg);
+}
+
+.sidebar.admin-theme .sidebar-header h3 {
+    color: var(--pure-white);
+    margin: 0;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.sidebar.admin-theme .sidebar-menu a {
+    color: #bdc3c7;
+    border-left-color: transparent;
+    transition: all var(--transition-normal);
+}
+
+.sidebar.admin-theme .sidebar-menu a:hover,
+.sidebar.admin-theme .sidebar-menu a.active {
+    background: #34495e;
+    color: #ecf0f1;
+    border-left-color: #c8102e;
+}
+
+/* Header admin específico */
+.main-header.admin-theme {
+    background: linear-gradient(135deg, #c8102e 0%, #9a0c24 100%);
+    box-shadow: var(--shadow-md);
+}
+
+/* Contenedor principal admin */
+.admin .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección de bienvenida admin MEJORADA */
+.admin .welcome-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-xl);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid #c8102e;
+}
+
+.admin .welcome-section h2 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--gray-800);
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.admin .welcome-section p {
+    color: var(--gray-600);
+    font-size: var(--font-size-lg);
+    margin: 0;
+}
+
+/* Grid de métricas MEJORADO */
+.admin .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.admin .metric-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    transition: all var(--transition-normal);
+    border: 1px solid var(--gray-200);
+    position: relative;
+    overflow: hidden;
+}
+
+.admin .metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #c8102e;
+}
+
+.admin .metric-card:nth-child(2)::before { background: #198754; }
+.admin .metric-card:nth-child(3)::before { background: #ffc107; }
+.admin .metric-card:nth-child(4)::before { background: #0dcaf0; }
+
+.admin .metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: #c8102e;
+}
+
+.admin .metric-icon {
+    font-size: 2.5rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+}
+
+.admin .metric-info h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1;
+}
+
+.admin .metric-info p {
+    color: var(--gray-600);
+    font-weight: 500;
+    margin: 0;
+    font-size: var(--font-size-sm);
+}
+
+/* Sección de servicios MEJORADA */
+.admin .services {
+    margin: var(--spacing-xxl) 0;
+}
+
+.admin .section-title {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-xl);
+    color: var(--gray-800);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    position: relative;
+    padding-bottom: var(--spacing-md);
+}
+
+.admin .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* Grid de servicios MEJORADO */
+.admin .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.admin .service-card {
+    background: var(--pure-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all var(--transition-normal);
+    border: 1px solid var(--gray-200);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.admin .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #c8102e 0%, #e6173a 100%);
+}
+
+.admin .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.admin .service-card .service-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-lg);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #c8102e 0%, #e6173a 100%);
+    color: white;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform var(--transition-normal);
+}
+
+.admin .service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.admin .service-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--gray-800);
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.admin .service-card p {
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    flex-grow: 1;
+}
+
+/* Botones específicos admin */
+.admin .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all var(--transition-normal);
+    font-size: 1rem;
+    line-height: 1;
+    background: linear-gradient(135deg, #c8102e 0%, #e6173a 100%);
+    color: var(--pure-white);
+}
+
+.admin .btn:hover {
+    background: linear-gradient(135deg, #9a0c24 0%, #c8102e 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: var(--pure-white);
+}
+
+/* Footer admin específico */
+.admin .main-footer {
+    background: var(--gray-700);
+    color: var(--pure-white);
+    margin-top: var(--spacing-xxl);
+}
+
+.admin .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl) 0;
+}
+
+.admin .footer-section h4 {
+    margin-bottom: var(--spacing-md);
+    color: var(--pure-white);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.admin .footer-description {
+    color: var(--gray-300);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.admin .contact-info p,
+.admin .business-hours p {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    color: var(--gray-300);
+}
+
+.admin .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.admin .footer-links li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.admin .footer-links a {
+    color: var(--gray-300);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.admin .footer-links a:hover {
+    color: var(--pure-white);
+}
+
+.admin .footer-bottom {
+    border-top: 1px solid var(--gray-600);
+    padding: var(--spacing-lg) 0;
+}
+
+.admin .footer-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.admin .footer-bottom-links {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.admin .footer-bottom-links a {
+    color: var(--gray-300);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    font-size: var(--font-size-sm);
+}
+
+.admin .footer-bottom-links a:hover {
+    color: var(--pure-white);
+}
+
+/* Utilidades específicas para admin */
+.admin .text-center {
+    text-align: center;
+}
+
+.admin .mt-0 { margin-top: 0; }
+.admin .mt-1 { margin-top: var(--spacing-sm); }
+.admin .mt-2 { margin-top: var(--spacing-md); }
+.admin .mt-3 { margin-top: var(--spacing-lg); }
+.admin .mt-4 { margin-top: var(--spacing-xl); }
+
+.admin .mb-0 { margin-bottom: 0; }
+.admin .mb-1 { margin-bottom: var(--spacing-sm); }
+.admin .mb-2 { margin-bottom: var(--spacing-md); }
+.admin .mb-3 { margin-bottom: var(--spacing-lg); }
+.admin .mb-4 { margin-bottom: var(--spacing-xl); }
+
+/* Responsive design para admin */
+@media (max-width: 768px) {
+    .admin .main-layout {
+        flex-direction: column;
+    }
+    
+    .admin .main-content-with-sidebar {
+        margin-left: 0;
+        padding: var(--spacing-md);
+    }
+    
+    .admin .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .admin .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .admin .metric-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .admin .service-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .admin .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .admin .footer-bottom-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .admin .footer-bottom-links {
+        justify-content: center;
+    }
+}
+
+/* Estados de carga específicos para admin */
+.admin .loading {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--gray-600);
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-lg) 0;
+}
+
+.admin .no-data {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--gray-500);
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--gray-300);
+}
+
+/* Mejoras de accesibilidad para admin */
+.admin .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus states mejorados para admin */
+.admin .btn:focus-visible,
+.admin .service-card:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Animaciones específicas para admin */
+@keyframes adminFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin .service-card {
+    animation: adminFadeIn 0.6s ease-out;
+}
+
+.admin .metric-card {
+    animation: adminFadeIn 0.6s ease-out;
+}
+
+.admin .metric-card:nth-child(1) { animation-delay: 0.1s; }
+.admin .metric-card:nth-child(2) { animation-delay: 0.2s; }
+.admin .metric-card:nth-child(3) { animation-delay: 0.3s; }
+.admin .metric-card:nth-child(4) { animation-delay: 0.4s; }

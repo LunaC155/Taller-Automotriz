@@ -1,0 +1,17 @@
+# Archivos compilados y empaquetados
+/build/
+/dist/
+*.class
+*.jar
+*.war
+
+# Configuraciones privadas y temporales de NetBeans
+/nbproject/private/
+/nbproject/project.xml.bak
+/nbproject/project.properties.bak
+/nbproject/build-impl.xml.bak
+/nbproject/genfiles.properties.bak
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db

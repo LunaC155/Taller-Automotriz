@@ -1,0 +1,455 @@
+/* ============================================
+   STYLES-RECEPCIONISTA.CSS - PANEL DE RECEPCIÓN MEJORADO
+   ============================================ */
+
+/* Body específico para recepcionista - SIN interferir con components.css */
+body.body-recepcionista {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+    min-height: 100vh;
+}
+
+/* Layout container para recepcionista */
+.recepcionista .page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.recepcionista .layout-container {
+    display: flex;
+    flex: 1;
+}
+
+.recepcionista .main-content-with-sidebar {
+    background: #f8f9fa;
+    flex: 1;
+    padding: var(--spacing-lg);
+}
+
+/* Sidebar específico para recepcionista */
+.sidebar.recepcion-theme {
+    background: linear-gradient(180deg, #0dcaf0 0%, #0aa2c0 100%);
+    border-right: none;
+}
+
+.sidebar.recepcion-theme .sidebar-header {
+    background: #0aa2c0;
+    border-bottom-color: #0dcaf0;
+    padding: var(--spacing-lg);
+}
+
+.sidebar.recepcion-theme .sidebar-header h3 {
+    color: var(--pure-white);
+    margin: 0;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.sidebar.recepcion-theme .sidebar-menu a {
+    color: #c0f0ff;
+    border-left-color: transparent;
+    transition: all var(--transition-normal);
+}
+
+.sidebar.recepcion-theme .sidebar-menu a:hover,
+.sidebar.recepcion-theme .sidebar-menu a.active {
+    background: #0ba8c7;
+    color: #ffffff;
+    border-left-color: #ffd54f;
+}
+
+/* Header recepcionista específico */
+.main-header.recepcion-theme {
+    background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%);
+    box-shadow: var(--shadow-md);
+}
+
+/* Contenedor principal recepcionista */
+.recepcionista .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección de bienvenida recepcionista MEJORADA */
+.recepcionista .welcome-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-xl);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid #0dcaf0;
+}
+
+.recepcionista .welcome-section h2 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--gray-800);
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.recepcionista .welcome-section p {
+    color: var(--gray-600);
+    font-size: var(--font-size-lg);
+    margin: 0;
+}
+
+/* Grid de métricas MEJORADO */
+.recepcionista .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.recepcionista .metric-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    transition: all var(--transition-normal);
+    border: 1px solid var(--gray-200);
+    position: relative;
+    overflow: hidden;
+}
+
+.recepcionista .metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #0dcaf0;
+}
+
+.recepcionista .metric-card:nth-child(2)::before { background: #198754; }
+.recepcionista .metric-card:nth-child(3)::before { background: #fd7e14; }
+.recepcionista .metric-card:nth-child(4)::before { background: #6f42c1; }
+
+.recepcionista .metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: #0dcaf0;
+}
+
+.recepcionista .metric-icon {
+    font-size: 2.5rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+}
+
+.recepcionista .metric-info h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1;
+}
+
+.recepcionista .metric-info p {
+    color: var(--gray-600);
+    font-weight: 500;
+    margin: 0;
+    font-size: var(--font-size-sm);
+}
+
+/* Acciones rápidas MEJORADAS */
+.recepcionista .quick-actions {
+    margin: var(--spacing-xl) 0;
+}
+
+.recepcionista .section-title {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-xl);
+    color: var(--gray-800);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    position: relative;
+    padding-bottom: var(--spacing-md);
+}
+
+.recepcionista .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #0dcaf0;
+    border-radius: 2px;
+}
+
+.recepcionista .actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.recepcionista .action-card {
+    background: var(--pure-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    transition: all var(--transition-normal);
+    border: 2px solid transparent;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.recepcionista .action-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #0dcaf0 0%, #31d2f2 100%);
+}
+
+.recepcionista .action-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: #0dcaf0;
+    color: inherit;
+}
+
+.recepcionista .action-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0dcaf0 0%, #31d2f2 100%);
+    color: white;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform var(--transition-normal);
+}
+
+.recepcionista .action-card:hover .action-icon {
+    transform: scale(1.1);
+}
+
+.recepcionista .action-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--gray-800);
+    font-weight: 600;
+}
+
+.recepcionista .action-card p {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Grid de servicios MEJORADO */
+.recepcionista .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.recepcionista .service-card {
+    background: var(--pure-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all var(--transition-normal);
+    border: 1px solid var(--gray-200);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.recepcionista .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #0dcaf0 0%, #31d2f2 100%);
+}
+
+.recepcionista .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: #0dcaf0;
+}
+
+.recepcionista .service-card .service-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-lg);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0dcaf0 0%, #31d2f2 100%);
+    color: white;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform var(--transition-normal);
+}
+
+.recepcionista .service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.recepcionista .service-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--gray-800);
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.recepcionista .service-card p {
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    flex-grow: 1;
+}
+
+/* Botones específicos recepcionista */
+.recepcionista .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all var(--transition-normal);
+    font-size: 1rem;
+    line-height: 1;
+    background: linear-gradient(135deg, #0dcaf0 0%, #31d2f2 100%);
+    color: var(--pure-white);
+}
+
+.recepcionista .btn:hover {
+    background: linear-gradient(135deg, #0aa2c0 0%, #0dcaf0 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: var(--pure-white);
+}
+
+/* Footer recepcionista específico */
+.recepcionista .main-footer {
+    background: var(--gray-700);
+    color: var(--pure-white);
+    margin-top: auto;
+}
+
+/* Estados de carga específicos para recepcionista */
+.recepcionista .loading {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--gray-600);
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-lg) 0;
+}
+
+.recepcionista .no-data {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--gray-500);
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--gray-300);
+}
+
+/* Responsive design para recepcionista */
+@media (max-width: 768px) {
+    .recepcionista .layout-container {
+        flex-direction: column;
+    }
+    
+    .recepcionista .main-content-with-sidebar {
+        padding: var(--spacing-md);
+    }
+    
+    .recepcionista .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .recepcionista .actions-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .recepcionista .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .recepcionista .metric-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .recepcionista .action-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .recepcionista .service-card {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* Animaciones específicas para recepcionista */
+@keyframes recepcionistaFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.recepcionista .service-card {
+    animation: recepcionistaFadeIn 0.6s ease-out;
+}
+
+.recepcionista .metric-card {
+    animation: recepcionistaFadeIn 0.6s ease-out;
+}
+
+.recepcionista .action-card {
+    animation: recepcionistaFadeIn 0.6s ease-out;
+}
+
+.recepcionista .metric-card:nth-child(1) { animation-delay: 0.1s; }
+.recepcionista .metric-card:nth-child(2) { animation-delay: 0.2s; }
+.recepcionista .metric-card:nth-child(3) { animation-delay: 0.3s; }
+.recepcionista .metric-card:nth-child(4) { animation-delay: 0.4s; }

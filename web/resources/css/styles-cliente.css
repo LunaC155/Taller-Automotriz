@@ -1,0 +1,506 @@
+/* ============================================
+   STYLES-CLIENTE.CSS - ÁREA DE CLIENTE MEJORADO
+   ============================================ */
+
+/* Body específico para cliente - SIN interferir con components.css */
+body.body-cliente {
+    background: linear-gradient(135deg, #f0f2f5 0%, #e4e6ef 100%);
+    min-height: 100vh;
+}
+
+/* Layout container para cliente */
+.cliente .page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cliente .layout-container {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar específico para cliente */
+.sidebar.cliente-theme {
+    background: linear-gradient(180deg, #6f42c1 0%, #59359a 100%);
+    border-right: none;
+}
+
+.sidebar.cliente-theme .sidebar-header {
+    background: #553098;
+    border-bottom-color: #6f42c1;
+    padding: var(--spacing-lg);
+}
+
+.sidebar.cliente-theme .sidebar-header h3 {
+    color: var(--pure-white);
+    margin: 0;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.sidebar.cliente-theme .sidebar-menu a {
+    color: #d8c7ff;
+    border-left-color: transparent;
+    transition: all var(--transition-normal);
+}
+
+.sidebar.cliente-theme .sidebar-menu a:hover,
+.sidebar.cliente-theme .sidebar-menu a.active {
+    background: #59359a;
+    color: #ffffff;
+    border-left-color: #ffd54f;
+}
+
+/* Header cliente específico */
+.main-header.cliente-theme {
+    background: linear-gradient(135deg, #6f42c1 0%, #59359a 100%);
+    box-shadow: var(--shadow-md);
+}
+
+/* Contenido principal cliente */
+.cliente .main-content-with-sidebar {
+    background: #f8f9fa;
+    flex: 1;
+    padding: var(--spacing-lg);
+}
+
+/* Contenedor principal cliente */
+.cliente .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección de bienvenida cliente MEJORADA */
+.cliente .welcome-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-xl);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid #6f42c1;
+}
+
+.cliente .welcome-section h2 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--gray-800);
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.cliente .welcome-section p {
+    color: var(--gray-600);
+    font-size: var(--font-size-lg);
+    margin: 0;
+}
+
+/* Grid de métricas MEJORADO */
+.cliente .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.cliente .metric-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    transition: all var(--transition-normal);
+    border: 1px solid var(--gray-200);
+    position: relative;
+    overflow: hidden;
+}
+
+.cliente .metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #6f42c1;
+}
+
+.cliente .metric-card:nth-child(2)::before { background: #198754; }
+.cliente .metric-card:nth-child(3)::before { background: #fd7e14; }
+.cliente .metric-card:nth-child(4)::before { background: #20c997; }
+
+.cliente .metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: #6f42c1;
+}
+
+.cliente .metric-icon {
+    font-size: 2.5rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+}
+
+.cliente .metric-info h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1;
+}
+
+.cliente .metric-info p {
+    color: var(--gray-600);
+    font-weight: 500;
+    margin: 0;
+    font-size: var(--font-size-sm);
+}
+
+/* Acciones rápidas MEJORADAS */
+.cliente .quick-actions {
+    margin: var(--spacing-xl) 0;
+}
+
+.cliente .section-title {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-xl);
+    color: var(--gray-800);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    position: relative;
+    padding-bottom: var(--spacing-md);
+}
+
+.cliente .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #6f42c1;
+    border-radius: 2px;
+}
+
+.cliente .actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.cliente .action-card {
+    background: var(--pure-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    transition: all var(--transition-normal);
+    border: 2px solid transparent;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.cliente .action-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #6f42c1 0%, #8c68cd 100%);
+}
+
+.cliente .action-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: #6f42c1;
+    color: inherit;
+}
+
+.cliente .action-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6f42c1 0%, #8c68cd 100%);
+    color: white;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform var(--transition-normal);
+}
+
+.cliente .action-card:hover .action-icon {
+    transform: scale(1.1);
+}
+
+.cliente .action-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--gray-800);
+    font-weight: 600;
+}
+
+.cliente .action-card p {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Grid de servicios MEJORADO */
+.cliente .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.cliente .service-card {
+    background: var(--pure-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all var(--transition-normal);
+    border: 1px solid var(--gray-200);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.cliente .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #6f42c1 0%, #8c68cd 100%);
+}
+
+.cliente .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: #6f42c1;
+}
+
+.cliente .service-card .service-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-lg);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6f42c1 0%, #8c68cd 100%);
+    color: white;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform var(--transition-normal);
+}
+
+.cliente .service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.cliente .service-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--gray-800);
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.cliente .service-card p {
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    flex-grow: 1;
+}
+
+/* Servicios activos MEJORADOS */
+.cliente .active-services {
+    background: var(--pure-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    margin: var(--spacing-xl) 0;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+}
+
+.cliente .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.cliente .service-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    border-left: 4px solid #6f42c1;
+    transition: all var(--transition-normal);
+}
+
+.cliente .service-item:hover {
+    background: #f0e6ff;
+    transform: translateX(4px);
+}
+
+.cliente .service-status {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius-pill);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.cliente .status-pending { background: #fff3cd; color: #856404; }
+.cliente .status-in-progress { background: #cce7ff; color: #004085; }
+.cliente .status-completed { background: #d4edda; color: #155724; }
+
+/* Botones específicos cliente */
+.cliente .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all var(--transition-normal);
+    font-size: 1rem;
+    line-height: 1;
+    background: linear-gradient(135deg, #6f42c1 0%, #8c68cd 100%);
+    color: var(--pure-white);
+}
+
+.cliente .btn:hover {
+    background: linear-gradient(135deg, #59359a 0%, #6f42c1 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: var(--pure-white);
+}
+
+/* Footer cliente específico */
+.cliente .main-footer {
+    background: var(--gray-700);
+    color: var(--pure-white);
+    margin-top: auto;
+}
+
+/* Estados de carga específicos para cliente */
+.cliente .loading {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--gray-600);
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-lg) 0;
+}
+
+.cliente .no-data {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--gray-500);
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--gray-300);
+}
+
+/* Responsive design para cliente */
+@media (max-width: 768px) {
+    .cliente .layout-container {
+        flex-direction: column;
+    }
+    
+    .cliente .main-content-with-sidebar {
+        padding: var(--spacing-md);
+    }
+    
+    .cliente .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .cliente .actions-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .cliente .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .cliente .metric-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .cliente .action-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .cliente .service-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .cliente .service-item {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+}
+
+/* Animaciones específicas para cliente */
+@keyframes clienteFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cliente .service-card {
+    animation: clienteFadeIn 0.6s ease-out;
+}
+
+.cliente .metric-card {
+    animation: clienteFadeIn 0.6s ease-out;
+}
+
+.cliente .action-card {
+    animation: clienteFadeIn 0.6s ease-out;
+}
+
+.cliente .metric-card:nth-child(1) { animation-delay: 0.1s; }
+.cliente .metric-card:nth-child(2) { animation-delay: 0.2s; }
+.cliente .metric-card:nth-child(3) { animation-delay: 0.3s; }
+.cliente .metric-card:nth-child(4) { animation-delay: 0.4s; }

@@ -1,0 +1,413 @@
+/* ============================================
+   STYLES-MECANICO.CSS - PANEL DE MECÁNICO MEJORADO
+   ============================================ */
+
+/* Body específico para mecánico - SIN interferir con components.css */
+body.body-mecanico {
+    background: linear-gradient(135deg, #f0f9f0 0%, #e8f5e8 100%);
+    min-height: 100vh;
+}
+
+/* Layout principal para mecánico */
+.mecanico .main-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.mecanico .main-content-with-sidebar {
+    flex: 1;
+    padding: var(--spacing-lg);
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Sidebar específico para mecánico */
+.sidebar.mecanico-theme {
+    background: linear-gradient(180deg, #198754 0%, #0f5132 100%);
+    border-right: none;
+}
+
+.sidebar.mecanico-theme .sidebar-header {
+    background: #0f5132;
+    border-bottom-color: #198754;
+    padding: var(--spacing-lg);
+}
+
+.sidebar.mecanico-theme .sidebar-header h3 {
+    color: var(--pure-white);
+    margin: 0;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.sidebar.mecanico-theme .sidebar-menu a {
+    color: #b8e0c8;
+    border-left-color: transparent;
+    transition: all var(--transition-normal);
+}
+
+.sidebar.mecanico-theme .sidebar-menu a:hover,
+.sidebar.mecanico-theme .sidebar-menu a.active {
+    background: #146c43;
+    color: #ffffff;
+    border-left-color: #ffd54f;
+}
+
+/* Header mecánico específico */
+.main-header.mecanico-theme {
+    background: linear-gradient(135deg, #198754 0%, #0f5132 100%);
+    box-shadow: var(--shadow-md);
+}
+
+/* Contenedor principal mecánico */
+.mecanico .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección de bienvenida mecánico MEJORADA */
+.mecanico .welcome-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-xl);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid #198754;
+}
+
+.mecanico .welcome-section h2 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--gray-800);
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.mecanico .welcome-section p {
+    color: var(--gray-600);
+    font-size: var(--font-size-lg);
+    margin: 0;
+}
+
+/* Grid de métricas MEJORADO */
+.mecanico .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.mecanico .metric-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    transition: all var(--transition-normal);
+    border: 1px solid var(--gray-200);
+    position: relative;
+    overflow: hidden;
+}
+
+.mecanico .metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #198754;
+}
+
+.mecanico .metric-card:nth-child(2)::before { background: #0dcaf0; }
+.mecanico .metric-card:nth-child(3)::before { background: #fd7e14; }
+.mecanico .metric-card:nth-child(4)::before { background: #6f42c1; }
+
+.mecanico .metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: #198754;
+}
+
+.mecanico .metric-icon {
+    font-size: 2.5rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+}
+
+.mecanico .metric-info h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1;
+}
+
+.mecanico .metric-info p {
+    color: var(--gray-600);
+    font-weight: 500;
+    margin: 0;
+    font-size: var(--font-size-sm);
+}
+
+/* Grid de servicios MEJORADO */
+.mecanico .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.mecanico .service-card {
+    background: var(--pure-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all var(--transition-normal);
+    border: 1px solid var(--gray-200);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.mecanico .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #198754 0%, #20c997 100%);
+}
+
+.mecanico .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: #198754;
+}
+
+.mecanico .service-card .service-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-lg);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #198754 0%, #20c997 100%);
+    color: white;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform var(--transition-normal);
+}
+
+.mecanico .service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.mecanico .service-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--gray-800);
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.mecanico .service-card p {
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    flex-grow: 1;
+}
+
+/* Órdenes recientes MEJORADAS */
+.mecanico .recent-orders {
+    background: var(--pure-white);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    margin: var(--spacing-xl) 0;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+}
+
+.mecanico .orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.mecanico .order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-lg);
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    border-left: 4px solid #198754;
+    transition: all var(--transition-normal);
+}
+
+.mecanico .order-item:hover {
+    background: #e8f5e8;
+    transform: translateX(4px);
+}
+
+.mecanico .order-info h4 {
+    color: var(--gray-800);
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.mecanico .order-details {
+    display: flex;
+    gap: var(--spacing-lg);
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+}
+
+.mecanico .order-status {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius-pill);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.mecanico .status-high { background: #f8d7da; color: #721c24; }
+.mecanico .status-medium { background: #fff3cd; color: #856404; }
+.mecanico .status-low { background: #d1ecf1; color: #0c5460; }
+
+/* Botones específicos mecánico */
+.mecanico .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all var(--transition-normal);
+    font-size: 1rem;
+    line-height: 1;
+    background: linear-gradient(135deg, #198754 0%, #20c997 100%);
+    color: var(--pure-white);
+}
+
+.mecanico .btn:hover {
+    background: linear-gradient(135deg, #0f5132 0%, #198754 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: var(--pure-white);
+}
+
+/* Footer mecánico específico */
+.mecanico .main-footer {
+    background: var(--gray-700);
+    color: var(--pure-white);
+    margin-top: auto;
+}
+
+/* Estados de carga específicos para mecánico */
+.mecanico .loading {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--gray-600);
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-lg) 0;
+}
+
+.mecanico .no-data {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--gray-500);
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--gray-300);
+}
+
+/* Responsive design para mecánico */
+@media (max-width: 768px) {
+    .mecanico .main-layout {
+        flex-direction: column;
+    }
+    
+    .mecanico .main-content-with-sidebar {
+        margin-left: 0;
+        padding: var(--spacing-md);
+    }
+    
+    .mecanico .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .mecanico .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .mecanico .metric-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .mecanico .service-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .mecanico .order-item {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .mecanico .order-details {
+        justify-content: center;
+    }
+}
+
+/* Animaciones específicas para mecánico */
+@keyframes mecanicoFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mecanico .service-card {
+    animation: mecanicoFadeIn 0.6s ease-out;
+}
+
+.mecanico .metric-card {
+    animation: mecanicoFadeIn 0.6s ease-out;
+}
+
+.mecanico .order-item {
+    animation: mecanicoFadeIn 0.6s ease-out;
+}
+
+.mecanico .metric-card:nth-child(1) { animation-delay: 0.1s; }
+.mecanico .metric-card:nth-child(2) { animation-delay: 0.2s; }
+.mecanico .metric-card:nth-child(3) { animation-delay: 0.3s; }
+.mecanico .metric-card:nth-child(4) { animation-delay: 0.4s; }
